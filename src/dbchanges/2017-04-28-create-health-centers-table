@@ -1,0 +1,15 @@
+CREATE database healthcenters;
+
+DROP TABLE IF EXISTS `healthcare_center_data`;
+CREATE TABLE `healthcare_center_data` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name1` varchar(255) DEFAULT NULL,
+  `name2` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `street1` varchar(255) DEFAULT NULL,
+  `zip` varchar(30) DEFAULT NULL,
+  `latitude` decimal(10,8) DEFAULT NULL,
+  `longitude` decimal(11,8) DEFAULT NULL,
+  `phone` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
