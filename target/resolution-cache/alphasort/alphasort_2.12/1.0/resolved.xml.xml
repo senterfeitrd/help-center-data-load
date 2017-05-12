@@ -4,7 +4,7 @@
 		module="alphasort_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170429104243"
+		publication="20170511173737"
 	>
 		<description>
 		alphaSort
@@ -36,6 +36,10 @@
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.2" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.json4s" name="json4s-native_2.12" rev="3.5.1" conf="compile->default(compile)"/>
 		<dependency org="org.json4s" name="json4s-jackson_2.12" rev="3.5.1" conf="compile->default(compile)"/>
-		<dependency org="javax.persistence" name="persistence-api" rev="1.0" conf="compile->default(compile)"/>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.0.8" conf="compile->default(compile)"/>
+		<dependency org="org.hibernate" name="hibernate-core" rev="5.2.10.Final" conf="compile->default(compile)"/>
+		<dependency org="org.hibernate" name="hibernate-entitymanager" rev="5.2.10.Final" conf="compile->default(compile)">
+			<exclude org="org.hibernate.javax.persistence" module="hibernate-jpa-2.0-api" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
 	</dependencies>
 </ivy-module>
