@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170511173737"/>
+		date="20170511232719"/>
 	<dependencies>
 		<module organisation="org.hibernate" name="hibernate-entitymanager">
 			<revision name="5.2.10.Final" status="release" pubdate="20170414063658" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="22">
@@ -165,12 +165,12 @@
 			</revision>
 		</module>
 		<module organisation="mysql" name="mysql-connector-java">
-			<revision name="5.0.8" status="release" pubdate="20150420132600" resolver="public" artresolver="public" homepage="http://dev.mysql.com/usingmysql/java/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="11">
+			<revision name="5.0.8" status="release" pubdate="20150420132600" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://dev.mysql.com/usingmysql/java/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="11">
 				<license name="The GNU General Public License, Version 2" url="http://www.gnu.org/licenses/gpl.txt"/>
-				<metadata-artifact status="successful" details="" size="1262" time="161" location="/Users/rachel/.ivy2/cache/mysql/mysql-connector-java/ivy-5.0.8.xml" searched="true" original-local-location="/Users/rachel/.ivy2/cache/mysql/mysql-connector-java/ivy-5.0.8.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.0.8/mysql-connector-java-5.0.8.pom"/>
+				<metadata-artifact status="no" details="" size="2512" time="0" location="/Users/rachel/.ivy2/cache/mysql/mysql-connector-java/ivy-5.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.0.8/mysql-connector-java-5.0.8.pom"/>
 				<caller organisation="alphasort" name="alphasort_2.12" conf="compile, runtime" rev="5.0.8" rev-constraint-default="5.0.8" rev-constraint-dynamic="5.0.8" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="mysql-connector-java" type="jar" ext="jar" status="successful" details="" size="540852" time="527" location="/Users/rachel/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.0.8.jar">
+					<artifact name="mysql-connector-java" type="jar" ext="jar" status="no" details="" size="540852" time="0" location="/Users/rachel/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.0.8.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.0.8/mysql-connector-java-5.0.8.jar"/>
 					</artifact>
 				</artifacts>

@@ -6009,7 +6009,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 2138ms :: artifacts dl 49ms
+[debug] :: resolution report :: resolve 2315ms :: artifacts dl 36ms
 [debug] 	report for default#health-center-data-load-build;0.1-SNAPSHOT compile produced in /Users/rachel/coding/health-center-data-load/project/target/resolution-cache/reports/default-health-center-data-load-build-compile.xml
 [debug] 	report for default#health-center-data-load-build;0.1-SNAPSHOT runtime produced in /Users/rachel/coding/health-center-data-load/project/target/resolution-cache/reports/default-health-center-data-load-build-runtime.xml
 [debug] 	report for default#health-center-data-load-build;0.1-SNAPSHOT test produced in /Users/rachel/coding/health-center-data-load/project/target/resolution-cache/reports/default-health-center-data-load-build-test.xml
@@ -6023,5 +6023,5 @@
 [debug] 	report for default#health-center-data-load-build;0.1-SNAPSHOT docs produced in /Users/rachel/coding/health-center-data-load/project/target/resolution-cache/reports/default-health-center-data-load-build-docs.xml
 [debug] 	report for default#health-center-data-load-build;0.1-SNAPSHOT pom produced in /Users/rachel/coding/health-center-data-load/project/target/resolution-cache/reports/default-health-center-data-load-build-pom.xml
 [debug] 	report for default#health-center-data-load-build;0.1-SNAPSHOT scala-tool produced in /Users/rachel/coding/health-center-data-load/project/target/resolution-cache/reports/default-health-center-data-load-build-scala-tool.xml
-[debug] 	resolve done (2138ms resolve - 49ms download)
+[debug] 	resolve done (2315ms resolve - 36ms download)
 [info] Done updating.

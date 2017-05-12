@@ -1778,9 +1778,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.15!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 650ms :: artifacts dl 21ms
+[debug] :: resolution report :: resolve 538ms :: artifacts dl 18ms
 [debug] 	report for alphasort#alphasort$sbt_2.10;1.0 default produced in /Users/rachel/coding/health-center-data-load/target/resolution-cache/reports/alphasort-alphasort$sbt_2.10-default.xml
-[debug] 	resolve done (650ms resolve - 21ms download)
+[debug] 	resolve done (538ms resolve - 18ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: alphasort#alphasort$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -2458,6 +2458,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.15!incremental-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logic;0.13.15!logic.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#main-settings;0.13.15!main-settings.jar(src)
-[debug] :: resolution report :: resolve 168ms :: artifacts dl 22ms
+[debug] :: resolution report :: resolve 174ms :: artifacts dl 19ms
 [debug] 	report for alphasort#alphasort$sources_2.10;1.0 default produced in /Users/rachel/coding/health-center-data-load/target/resolution-cache/reports/alphasort-alphasort$sources_2.10-default.xml
-[debug] 	resolve done (168ms resolve - 22ms download)
+[debug] 	resolve done (174ms resolve - 19ms download)
