@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170511232719"/>
+		date="20170516174134"/>
 	<dependencies>
 		<module organisation="org.hibernate" name="hibernate-entitymanager">
 			<revision name="5.2.10.Final" status="release" pubdate="20170414063658" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="22">

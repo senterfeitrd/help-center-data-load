@@ -1,7 +1,8 @@
 package healthcenterdataload
 
-import healthcenterdataload.Model._
+import java.sql.{Connection,DriverManager}
 
+import healthcenterdataload.Model._
 import javax.persistence._
 
 import org.json4s.native.JsonMethods._
@@ -29,7 +30,7 @@ object DataToStore extends App{
 
   // This is hard-coded right now, but could be moved out to a property file if needed
   // so it could be changed on the fly.
-  val url = "https://data.cityofnewyork.us/resource/8nqg-ia7v.json"
+  val url1 = "https://data.cityofnewyork.us/resource/8nqg-ia7v.json"
 
   def storeData(url: String): Unit = {
     // This is needed for date/time formatting with the json4s library
@@ -39,7 +40,11 @@ object DataToStore extends App{
     val dataParsedToList = parse(data).extract[List[DataToStoreClass]]
 
     val dataToStore = new HealthCenterData
-    try {
+
+
+    Class.forName("com.mysql.jdbc.Driver")
+    val con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/healthcenters", "root", "root")
+
       dataParsedToList.foreach { facility =>
 
         val alreadyStoredData = em.createNamedQuery("findExistingHealthCenters")
@@ -50,22 +55,28 @@ object DataToStore extends App{
         // Only store data if it's not already in the database.
         // I realize starting by checking for a false here is a little hard to read, but it's the
         // way to do it with as few lines as possible
-        if( !alreadyStoredData.contains(facility.name_1.getOrElse("")) || !alreadyStoredData.contains(facility.name_2.getOrElse("")) ) {
-          dataToStore.name1 = facility.name_1.getOrElse("")
-          dataToStore.name2 = facility.name_2.getOrElse("")
-          dataToStore.city = facility.city.getOrElse("")
-          dataToStore.latitude = facility.latitude.getOrElse("")
-          dataToStore.longitude = facility.longitude.getOrElse("")
-          dataToStore.zip = facility.zip.getOrElse("")
-          dataToStore.street1 = facility.street_1.getOrElse("")
-          dataToStore.phone = facility.phone.getOrElse("")
 
-          em.persist(dataToStore)
-        }
+        try{
+          if( !alreadyStoredData.contains(facility.name_1.getOrElse("")) || !alreadyStoredData.contains(facility.name_2.getOrElse("")) ) {
+            dataToStore.name1 = facility.name_1.getOrElse("")
+            dataToStore.name2 = facility.name_2.getOrElse("")
+            dataToStore.city = facility.city.getOrElse("")
+            dataToStore.latitude = facility.latitude.getOrElse("")
+            dataToStore.longitude = facility.longitude.getOrElse("")
+            dataToStore.zip = facility.zip.getOrElse("")
+            dataToStore.street1 = facility.street_1.getOrElse("")
+            dataToStore.phone = facility.phone.getOrElse("")
+
+            em.persist(dataToStore)
+            em.flush
+            //con.commit()
+            //con.close()
+            alreadyStoredData.clear
+          }
+        } catch {
+          case e: Exception => e.printStackTrace()
+        } finally { con.close}
       }
-    } catch {
-      case e: Exception => throw new Exception("Something went wrong in HealthCenter.storeData" + e.printStackTrace())
-    }
   }
 
 }

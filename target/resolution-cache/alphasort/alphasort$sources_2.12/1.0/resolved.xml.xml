@@ -4,7 +4,7 @@
 		module="alphasort$sources_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170511232720"
+		publication="20170516174147"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
